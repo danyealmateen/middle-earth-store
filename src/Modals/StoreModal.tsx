@@ -38,7 +38,7 @@ const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
             }}
           >
             <option value='rivendell'>Elfheim Fresh Fare</option>
-            <option value='helms deep'>The Deep Deli</option>
+            <option value='helmsdeep'>The Deep Deli</option>
             <option value='rohan'>Rohan's Rustic Rations</option>
             <option value='shire'>Baggins' Bounty</option>
           </select>
