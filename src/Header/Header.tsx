@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { styled } from 'styled-components';
 import StoreModal from '../Modals/StoreModal';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 const Header = () => {
   const [storeModalPopUp, setStoreModalPopUp] = useState(false);
@@ -20,12 +21,23 @@ const Header = () => {
       </TitleWrapper>
 
       <ContentContainer>
-        <h4>Shop Online</h4>
-        <h4>Offers</h4>
-        <h4>Mordors grocery bag</h4>
-        <h4>Recipies</h4>
-
-        <h4>Customer service</h4>
+        <Router>
+          <Link className='link' to='shop-online'>
+            Shop Online
+          </Link>
+          <Link className='link' to='offers'>
+            Offers
+          </Link>
+          <Link className='link' to='grocery-bag'>
+            Mordors Grocery Bag
+          </Link>
+          <Link className='link' to='recipes'>
+            Recipes
+          </Link>
+          <Link className='link' to='customer-service'>
+            Customer Service
+          </Link>
+        </Router>
       </ContentContainer>
       {storeModalPopUp && (
         <StoreModal
@@ -44,8 +56,15 @@ const ContentContainer = styled.div`
   justify-content: space-evenly;
   font-size: 15px;
 
-  & h4 {
-    font-size: 19px;
+  & .link {
+    font-size: 17px;
+    color: goldenrod;
+  }
+
+  & .link:hover {
+    font-size: 17px;
+    color: orange;
+    scale: 1.05;
   }
 `;
 
@@ -66,7 +85,7 @@ const NearestStoreWrapper = styled.div`
   color: white;
 
   & p {
-    color: #734e01;
+    color: orange;
     font-size: 20px;
     font-weight: 900;
   }
@@ -79,9 +98,16 @@ const NearestStoreWrapper = styled.div`
     background-color: goldenrod;
     font-family: 'Ringbearer', sans-serif;
     font-size: 15px;
+    cursor: pointer;
   }
 
   & button:active {
+    scale: 1.05;
+  }
+
+  & button:hover {
+    background-color: orange;
+    color: white;
     scale: 1.05;
   }
 `;
