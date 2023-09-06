@@ -25,6 +25,7 @@ const Header = () => {
         <h4>Offers</h4>
         <h4>Mordors grocery bag</h4>
         <h4>Recipies</h4>
+
         <h4>Customer service</h4>
       </ContentContainer>
       {storeModalPopUp && (
@@ -78,6 +79,7 @@ const NearestStoreWrapper = styled.div`
     color: black;
     background-color: goldenrod;
     font-family: 'Ringbearer', sans-serif;
+    font-size: 15px;
   }
 
   & button:active {

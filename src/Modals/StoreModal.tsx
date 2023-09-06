@@ -76,6 +76,7 @@ const ModalWrapper = styled.div`
     background-color: black;
     color: goldenrod;
     width: 30%;
+    border: 1px solid goldenrod;
   }
 
   & button {
@@ -84,6 +85,7 @@ const ModalWrapper = styled.div`
     background-color: black;
     border-radius: 5px;
     color: goldenrod;
+    
   }
 
   & img {
@@ -96,6 +98,8 @@ const ModalWrapper = styled.div`
   & button:active {
     scale: 1.05;
   }
+
+
 `;
 
 const ModalOverlay = styled.div`
