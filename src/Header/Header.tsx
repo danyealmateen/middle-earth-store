@@ -19,7 +19,6 @@ const Header = () => {
         <img src='./images/eye.png' alt='' />
         <h1>Mordors Groceries</h1>
       </TitleWrapper>
-
       <ContentContainer>
         <Router>
           <Link className='link' to='shop-online'>
@@ -74,6 +73,7 @@ const TitleWrapper = styled.div`
   text-align: center;
   text-decoration: underline;
   text-decoration-color: ;
+  margin-top: -4.6rem;
 
   & img {
     width: 200px;
