@@ -7,7 +7,6 @@ const Header = () => {
   const [chosenStore, setChosenStore] = useState(
     'Choose your nearest Mordor Grocery store'
   );
-  console.log(storeModalPopUp);
 
   return (
     <Fragment>
@@ -67,7 +66,7 @@ const NearestStoreWrapper = styled.div`
   color: white;
 
   & p {
-    color: #734E01;
+    color: #734e01;
     font-size: 20px;
     font-weight: 900;
   }

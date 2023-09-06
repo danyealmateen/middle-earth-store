@@ -9,7 +9,6 @@ interface StoreModalProps {
 const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
   const [selectedOption, setSelectedOption] = useState('');
   const [currentImage, setCurrentImage] = useState('./images/rivendell.jpg');
-  const [selectedStoreOption, setSelectedStoreOption] = useState('');
 
   useEffect(() => {
     switch (selectedOption) {
