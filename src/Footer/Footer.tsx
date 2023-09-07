@@ -43,7 +43,7 @@ const Footer = () => {
 };
 
 const Section: React.FC<SectionsProps> = ({ title, links }) => (
-  <div className='sectionDiv'>
+  <div>
     <h2>{title}</h2>
     {links.map((link) => (
       <StyledLink key={link} to='/'>
@@ -59,9 +59,9 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, auto);
-  align-items: flex-start; 
-  justify-items: center; 
-  gap: 15px; 
+  align-items: flex-start;
+  justify-items: center;
+  gap: 15px;
   margin-top: 15px;
 `;
 
