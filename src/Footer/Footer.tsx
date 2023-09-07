@@ -43,7 +43,7 @@ const Footer = () => {
 };
 
 const Section: React.FC<SectionsProps> = ({ title, links }) => (
-  <div>
+  <div className='sectionDiv'>
     <h2>{title}</h2>
     {links.map((link) => (
       <StyledLink key={link} to='/'>
@@ -70,6 +70,7 @@ const StyledLink = styled(RouterLink)`
   color: orange;
   text-decoration: none;
   text-align: center;
+  margin-top: 15px;
 
   &:hover {
     color: white;
