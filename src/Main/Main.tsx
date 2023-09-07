@@ -1,7 +1,76 @@
 import React, { Fragment } from 'react';
+import { styled } from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Main = () => {
-  return <Fragment></Fragment>;
+  return (
+    <Fragment>
+      <ContentContainer>
+        <img src='./images/mainone.png' alt='' />
+        <DivContainer>
+          <Router>
+            <StyledLink to='shop-online'>
+              <h2>Buy weapons</h2>
+              <p>Forge Ahead with Superior Firepower!</p>
+              <img src='./images/weapons.png' alt='' />
+            </StyledLink>
+            <StyledLink to='shop-online'>
+              <h2>Forged armor</h2>
+              <p>Browse our Unbeatable Armor!</p>
+              <img src='./images/armor.png' alt='' />
+            </StyledLink>
+            <StyledLink to='shop-online'>
+              <h2>Groceries</h2>
+              <p>Try out our premium Groceries!</p>
+              <img src='./images/lembas.png' alt='' />
+            </StyledLink>
+          </Router>
+        </DivContainer>
+      </ContentContainer>
+    </Fragment>
+  );
 };
 
 export default Main;
+
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & img {
+    width: 600px;
+    border-radius: 5px;
+  }
+`;
+
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  
+}
+`;
+
+const StyledLink = styled(RouterLink)`
+  background-color: #f6b100;
+  color: black;
+  padding: 15px;
+  margin: 0.5px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    background-color: black;
+    color: #f6b100;
+  }
+
+  & img {
+    width: 90px;
+    height: 60px;
+    border-radius: 50px;
+  }
+`;

@@ -1,41 +1,29 @@
 import React, { Fragment, useState } from 'react';
 import { styled } from 'styled-components';
 import StoreModal from '../Modals/StoreModal';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
   const [storeModalPopUp, setStoreModalPopUp] = useState(false);
   const [chosenStore, setChosenStore] = useState(
-    'Choose your nearest Mordor Grocery store'
+    'Choose your nearest Middle-Earth general store'
   );
 
   return (
     <Fragment>
-      <NearestStoreWrapper>
+      <ButtonWrapper>
         <p>{chosenStore}</p>
-        <button onClick={() => setStoreModalPopUp(true)}>Choose store</button>
-      </NearestStoreWrapper>
-      <TitleWrapper>
-        <img src='./images/eye.png' alt='' />
-        <h1>Mordors Groceries</h1>
-      </TitleWrapper>
+        <button onClick={() => setStoreModalPopUp(true)}>Choose Store</button>
+      </ButtonWrapper>
       <ContentContainer>
+        <img src='./images/tree.png' alt='' />
+        <h1>Middle-earth Online general store</h1>
         <Router>
-          <Link className='link' to='shop-online'>
-            Shop Online
-          </Link>
-          <Link className='link' to='offers'>
-            Offers
-          </Link>
-          <Link className='link' to='grocery-bag'>
-            Mordors Grocery Bag
-          </Link>
-          <Link className='link' to='recipes'>
-            Recipes
-          </Link>
-          <Link className='link' to='customer-service'>
-            Customer Service
-          </Link>
+          <StyledLink to='shop-online'>Weapons</StyledLink>
+          <StyledLink to='offers'>Armors</StyledLink>
+          <StyledLink to='grocery-bag'>Groceries</StyledLink>
+          <StyledLink to='customer-service'>Customer Service</StyledLink>
         </Router>
       </ContentContainer>
       {storeModalPopUp && (
@@ -50,64 +38,43 @@ const Header = () => {
 
 export default Header;
 
-const ContentContainer = styled.div`
+const ButtonWrapper = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  font-size: 15px;
-
-  & .link {
-    font-size: 17px;
-    color: goldenrod;
-  }
-
-  & .link:hover {
-    font-size: 17px;
-    color: orange;
-    scale: 1.05;
-  }
-`;
-
-const TitleWrapper = styled.div`
-  font-size: 20px;
-  color: orange;
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: ;
-  margin-top: -4.6rem;
-
-  & img {
-    width: 200px;
-  }
-`;
-
-const NearestStoreWrapper = styled.div`
-  display: flex;
-  color: white;
-
-  & p {
-    color: orange;
-    font-size: 20px;
-    font-weight: 900;
-  }
+  margin: 15px 0px 0px 15px;
 
   & button {
-    margin-left: 10px;
-    border: 10px solid black;
-    border-radius: 15px;
+    background-color: orange;
     color: black;
-    background-color: goldenrod;
     font-family: 'Ringbearer', sans-serif;
-    font-size: 15px;
-    cursor: pointer;
+    margin-left: 15px;
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  & button:hover {
+    background-color: white;
+    color: black;
   }
 
   & button:active {
     scale: 1.05;
   }
+`;
 
-  & button:hover {
-    background-color: orange;
+const ContentContainer = styled.div`
+  display: flex;
+  align-items: center;
+
+  & img {
+    width: 75px;
+  }
+`;
+
+const StyledLink = styled(RouterLink)`
+  color: orange;
+  margin-left: 20px;
+
+  &:hover {
     color: white;
-    scale: 1.05;
   }
 `;

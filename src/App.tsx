@@ -1,11 +1,14 @@
 import Header from './Header/Header';
-import StoreModal from './Modals/StoreModal';
+import Main from './Main/Main';
+import Footer from './Footer/Footer';
 import './App.css';
 
 const App = () => {
   return (
     <div className='App'>
       <Header />
+      <Main />
+      <Footer />
     </div>
   );
 };
