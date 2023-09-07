@@ -59,9 +59,9 @@ const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, auto);
-  align-items: flex-start; // Centrerar innehåll vertikalt i varje gridcell
-  justify-items: center; // Centrerar innehåll horisontellt i varje gridcell
-  gap: 15px; // Lägger till lite utrymme mellan gridcellerna
+  align-items: flex-start; 
+  justify-items: center; 
+  gap: 15px; 
   margin-top: 15px;
 `;
 
