@@ -1,37 +1,43 @@
 import React, { Fragment, useState } from 'react';
-import { styled } from 'styled-components';
 import StoreModal from '../Modals/StoreModal';
 import { BrowserRouter as Router, Link as RouterLink } from 'react-router-dom';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
+import './Header.css';
 
 const Header = () => {
   const [storeModalPopUp, setStoreModalPopUp] = useState(false);
-  const [chosenStore, setChosenStore] = useState('Choose your store');
+  const [chosenStore, setChosenStore] = useState('Choose your realm');
   const [showDropDown, setShowDropDown] = useState(false);
 
   return (
     <Fragment>
-      <ButtonWrapper>
+      <div className='button-wrapper'>
         <p>{chosenStore}</p>
-        <button onClick={() => setStoreModalPopUp(true)}>Choose Store</button>
-      </ButtonWrapper>
-      <ContentContainer>
-        <img src='./images/tree.png' alt='' />
-        <h1>Middle-earth shop</h1>
-        <Router>
-          <DropdownWrapper
-            onMouseEnter={() => setShowDropDown(true)}
-            onMouseLeave={() => setShowDropDown(false)}
-          >
-            <StyledLink to='/weapons'>Legendary Weapons</StyledLink>
-            {showDropDown && <DropDownMenu />}
-          </DropdownWrapper>
-
-          <StyledLink to='offers'> Unique Armors</StyledLink>
-          <StyledLink to='grocery-bag'>Epic Groceries</StyledLink>
-        </Router>
-      </ContentContainer>
-      <StyledHr />
+        <button onClick={() => setStoreModalPopUp(true)}>Choose Realm</button>
+      </div>
+      <div className='content-container'>
+        <img src='./images/tree.png' alt='tree' />
+        <RouterLink className='styled-link' to='/'>
+          <h1>Middle-earth Wiki</h1>
+        </RouterLink>
+        <div
+          className='dropdown-wrapper'
+          onMouseEnter={() => setShowDropDown(true)}
+          onMouseLeave={() => setShowDropDown(false)}
+        >
+          <RouterLink className='styled-link' to='/weapons'>
+            Weapons
+          </RouterLink>
+          {showDropDown && <DropDownMenu />}
+        </div>
+        <RouterLink className='styled-link' to='/armors'>
+          Armors
+        </RouterLink>
+        <RouterLink className='styled-link' to='/rings'>
+          Rings
+        </RouterLink>
+      </div>
+      <hr className='styled-hr' />
       {storeModalPopUp && (
         <StoreModal
           storeName={(newStoreName) => setChosenStore(newStoreName)}
@@ -43,101 +49,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  margin: 15px;
-  justify-content: space-between;
-
-  & button {
-    background-color: orange;
-    color: black;
-    font-family: 'Ringbearer', sans-serif;
-    margin-left: 15px;
-    border-radius: 5px;
-    padding: 3px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-  }
-
-  & button:hover {
-    background-color: white;
-    color: black;
-  }
-
-  & button:active {
-    transform: scale(1.05);
-  }
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: stretch;
-    margin: 15px 0;
-
-    & button {
-      margin-left: 0;
-      width: 100%;
-    }
-  }
-`;
-
-const ContentContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-
-  @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  & img {
-    width: 75px;
-    border: 2px solid orange;
-    border-radius: 50px;
-  }
-`;
-
-const StyledLink = styled(RouterLink)`
-  color: orange;
-  margin-left: 20px;
-  font-size: 20px;
-
-  &:hover {
-    color: white;
-    transition: color 0.3s;
-  }
-
-  @media (max-width: 600px) {
-    margin-left: 0;
-    font-size: 18px;
-    text-align: center;
-  }
-`;
-
-const DropdownWrapper = styled.div<{
-  onMouseEnter: () => void;
-  onMouseLeave: () => void;
-}>`
-  position: relative;
-  color: yellow;
-
-  &:hover > div {
-    display: block;
-  }
-
-  @media (max-width: 600px) {
-    width: 100%;
-    text-align: center;
-  }
-`;
-
-const StyledHr = styled.hr`
-  border: 0;
-  height: 1px;
-  background: orange;
-  margin: 20px 0;
-
-  @media (max-width: 600px) {
-    margin: 10px 0;
-  }
-`;

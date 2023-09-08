@@ -42,7 +42,7 @@ const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
     <Fragment>
       <ModalOverlay onClick={closeModal}>
         <ModalWrapper onClick={(event) => event.stopPropagation()}>
-          <h1>Choose store</h1>
+          <h1>Choose realm</h1>
           <select
             onChange={(event) => {
               setSelectedOption(event.target.value);
@@ -60,7 +60,7 @@ const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
               closeModal();
             }}
           >
-            Save store
+            Save realm
           </button>
         </ModalWrapper>
       </ModalOverlay>
@@ -85,7 +85,7 @@ const ModalWrapper = styled.div`
     font-size: 20px;
     background-color: black;
     color: goldenrod;
-    width: 70%; /* Uppdaterad bredd */
+    width: 50%; /* Uppdaterad bredd */
     border: 1px solid goldenrod;
   }
 
@@ -114,7 +114,10 @@ const ModalWrapper = styled.div`
 
     & select,
     & button {
-      width: 100%; /* Ändrat till procentuell bredd för bättre responsivitet */
+      width: 70%; /* Ändrat till procentuell bredd för bättre responsivitet */
+    }
+    & button {
+      margin-bottom: 10px;
     }
   }
 `;
