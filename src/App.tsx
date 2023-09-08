@@ -11,7 +11,7 @@ const App = () => {
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path='/main' element={<Main />} />
+          <Route path='/' element={<Main />} />
           <Route path='/weapons' element={<WeaponsPage />} />
         </Routes>
       </BrowserRouter>
