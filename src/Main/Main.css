@@ -46,10 +46,10 @@
 }
 
 @media (max-width: 600px) {
-  .content-container img:first-child {
+  /* .content-container img:first-child {
     width: 100%;
     max-width: 300px;
-  }
+  } */
 
   .div-container {
     flex-direction: column;

@@ -16,7 +16,7 @@ const Header = () => {
         <button onClick={() => setStoreModalPopUp(true)}>Choose Realm</button>
       </div>
       <div className='content-container'>
-        <img src='./images/tree.png' alt='tree' />
+        <img className='treeIMG' src='./images/tree.png' alt='tree' />
         <RouterLink className='styled-link' to='/'>
           <h1>Middle-earth Wiki</h1>
         </RouterLink>
