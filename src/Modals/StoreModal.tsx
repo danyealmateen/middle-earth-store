@@ -7,23 +7,34 @@ interface StoreModalProps {
 }
 
 const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const storeOptions = [
+    {
+      value: 'rivendell',
+      label: 'Elfheim Fresh Fare',
+      img: './images/rivendell.jpg',
+    },
+    {
+      value: 'helmsdeep',
+      label: 'The Deep Deli',
+      img: './images/helmsdeep.jpg',
+    },
+    {
+      value: 'rohan',
+      label: "Rohan's Rustic Rations",
+      img: '../images/rohan.jpg',
+    },
+    { value: 'shire', label: "Baggins' Bounty", img: './images/shire.jpg' },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState('Rivendell');
   const [currentImage, setCurrentImage] = useState('./images/rivendell.jpg');
 
   useEffect(() => {
-    switch (selectedOption) {
-      case 'rivendell':
-        setCurrentImage('./images/rivendell.jpg');
-        break;
-      case 'helmsdeep':
-        setCurrentImage('./images/helmsdeep.jpg');
-        break;
-      case 'rohan':
-        setCurrentImage('../images/rohan.jpg');
-        break;
-      case 'shire':
-        setCurrentImage('./images/shire.jpg');
-        break;
+    const selectedStore = storeOptions.find(
+      (store) => store.value === selectedOption
+    );
+    if (selectedStore) {
+      setCurrentImage(selectedStore.img);
     }
   }, [selectedOption]);
 
@@ -84,7 +95,6 @@ const ModalWrapper = styled.div`
     background-color: black;
     border-radius: 5px;
     color: goldenrod;
-    
   }
 
   & img {
@@ -97,8 +107,6 @@ const ModalWrapper = styled.div`
   & button:active {
     scale: 1.05;
   }
-
-
 `;
 
 const ModalOverlay = styled.div`

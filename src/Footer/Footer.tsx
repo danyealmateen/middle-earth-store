@@ -73,6 +73,7 @@ const StyledLink = styled(RouterLink)`
   margin-top: 15px;
 
   &:hover {
+    transition: color 0.3s, color 0.3s, transform 0.3s;
     color: white;
   }
 `;

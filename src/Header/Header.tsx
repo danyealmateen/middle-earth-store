@@ -1,13 +1,12 @@
 import React, { Fragment, useState } from 'react';
 import { styled } from 'styled-components';
 import StoreModal from '../Modals/StoreModal';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
+import { BrowserRouter as Router, Link as RouterLink } from 'react-router-dom';
 
 const Header = () => {
   const [storeModalPopUp, setStoreModalPopUp] = useState(false);
   const [chosenStore, setChosenStore] = useState(
-    'Choose your nearest Middle-Earth general store'
+    'Choose your store'
   );
 
   return (
@@ -49,6 +48,7 @@ const ButtonWrapper = styled.div`
     margin-left: 15px;
     border-radius: 5px;
     padding: 3px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
   }
 
   & button:hover {
@@ -76,5 +76,6 @@ const StyledLink = styled(RouterLink)`
 
   &:hover {
     color: white;
+    transition: color 0.3s, color 0.3s, transform 0.3s;
   }
 `;

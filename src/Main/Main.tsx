@@ -66,6 +66,7 @@ const StyledLink = styled(RouterLink)`
   &:hover {
     background-color: black;
     color: #f6b100;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
   }
 
   & img {
