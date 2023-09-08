@@ -41,13 +41,25 @@ const ContentContainer = styled.div`
     width: 600px;
     border-radius: 5px;
   }
+
+  @media (max-width: 600px) {
+    & img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 `;
 
 const DivContainer = styled.div`
   display: flex;
   flex-direction: row;
-  
-}
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const StyledLink = styled(RouterLink)`
@@ -59,6 +71,9 @@ const StyledLink = styled(RouterLink)`
   height: 200px;
   text-align: center;
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: black;
@@ -70,5 +85,12 @@ const StyledLink = styled(RouterLink)`
     width: 90px;
     height: 60px;
     border-radius: 50px;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px 0;
   }
 `;

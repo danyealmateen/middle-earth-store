@@ -85,7 +85,7 @@ const ModalWrapper = styled.div`
     font-size: 20px;
     background-color: black;
     color: goldenrod;
-    width: 30%;
+    width: 70%; /* Uppdaterad bredd */
     border: 1px solid goldenrod;
   }
 
@@ -106,6 +106,16 @@ const ModalWrapper = styled.div`
 
   & button:active {
     scale: 1.05;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%; /* Ändrat till procentuell bredd för bättre responsivitet */
+    height: auto; /* Ändrat till auto för bättre responsivitet */
+
+    & select,
+    & button {
+      width: 100%; /* Ändrat till procentuell bredd för bättre responsivitet */
+    }
   }
 `;
 

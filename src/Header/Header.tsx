@@ -17,7 +17,7 @@ const Header = () => {
       </ButtonWrapper>
       <ContentContainer>
         <img src='./images/tree.png' alt='' />
-        <h1>Middle-earth general store</h1>
+        <h1>Middle-earth shop</h1>
         <Router>
           <DropdownWrapper
             onMouseEnter={() => setShowDropDown(true)}
@@ -46,7 +46,8 @@ export default Header;
 
 const ButtonWrapper = styled.div`
   display: flex;
-  margin: 15px 0px 0px 15px;
+  margin: 15px;
+  justify-content: space-between;
 
   & button {
     background-color: orange;
@@ -64,17 +65,34 @@ const ButtonWrapper = styled.div`
   }
 
   & button:active {
-    scale: 1.05;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 15px 0;
+
+    & button {
+      margin-left: 0;
+      width: 100%;
+    }
   }
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   align-items: center;
+  gap: 15px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   & img {
     width: 75px;
     border: 2px solid orange;
-    margin-right: 15px;
     border-radius: 50px;
   }
 `;
@@ -86,7 +104,13 @@ const StyledLink = styled(RouterLink)`
 
   &:hover {
     color: white;
-    transition: color 0.3s, color 0.3s, transform 0.3s;
+    transition: color 0.3s;
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 0;
+    font-size: 18px;
+    text-align: center;
   }
 `;
 
@@ -100,6 +124,11 @@ const DropdownWrapper = styled.div<{
   &:hover > div {
     display: block;
   }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    text-align: center;
+  }
 `;
 
 const StyledHr = styled.hr`
@@ -107,4 +136,8 @@ const StyledHr = styled.hr`
   height: 1px;
   background: orange;
   margin: 20px 0;
+
+  @media (max-width: 600px) {
+    margin: 10px 0;
+  }
 `;

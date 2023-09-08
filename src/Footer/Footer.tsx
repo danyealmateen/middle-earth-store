@@ -63,6 +63,20 @@ const GridContainer = styled.div`
   justify-items: center;
   gap: 15px;
   margin-top: 15px;
+
+  & h2 {
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
 `;
 
 const StyledLink = styled(RouterLink)`
@@ -73,7 +87,7 @@ const StyledLink = styled(RouterLink)`
   margin-top: 15px;
 
   &:hover {
-    transition: color 0.3s, color 0.3s, transform 0.3s;
+    transition: color 0.3s, transform 0.3s;
     color: white;
   }
 `;
