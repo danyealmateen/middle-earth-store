@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { styled } from 'styled-components';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom';
 
 const Main = () => {
@@ -9,23 +8,21 @@ const Main = () => {
       <ContentContainer>
         <img src='./images/mainone.png' alt='' />
         <DivContainer>
-          <Router>
-            <StyledLink to='shop-online'>
-              <h2>Buy weapons</h2>
-              <p>Forge Ahead with Superior Firepower!</p>
-              <img src='./images/weapons.png' alt='' />
-            </StyledLink>
-            <StyledLink to='shop-online'>
-              <h2>Forged armor</h2>
-              <p>Browse our Unbeatable Armor!</p>
-              <img src='./images/armor.png' alt='' />
-            </StyledLink>
-            <StyledLink to='shop-online'>
-              <h2>Groceries</h2>
-              <p>Try out our premium Groceries!</p>
-              <img src='./images/lembas.png' alt='' />
-            </StyledLink>
-          </Router>
+          <StyledLink to='shop-online'>
+            <h2>Buy weapons</h2>
+            <p>Forge Ahead with Superior Firepower!</p>
+            <img src='./images/weapons.png' alt='' />
+          </StyledLink>
+          <StyledLink to='shop-online'>
+            <h2>Forged armor</h2>
+            <p>Browse our Unbeatable Armor!</p>
+            <img src='./images/armor.png' alt='' />
+          </StyledLink>
+          <StyledLink to='shop-online'>
+            <h2>Groceries</h2>
+            <p>Try out our premium Groceries!</p>
+            <img src='./images/lembas.png' alt='' />
+          </StyledLink>
         </DivContainer>
       </ContentContainer>
     </Fragment>

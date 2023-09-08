@@ -15,7 +15,7 @@ const Footer = () => {
       links: ['Shop online', 'Grocery bag', 'Catering', 'Pharmacy'],
     },
     {
-      title: 'MIDDLE-EARTH ONLINE GENERAL STORE',
+      title: 'INFORMATION',
       links: ['Apps', 'Opening hours', 'Suppliers', 'Job openings'],
     },
     {
@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <Fragment>
       <br />
-      <hr />
+      <StyledHr />
       <Router>
         <GridContainer>
           {sections.map((section) => (
@@ -76,4 +76,10 @@ const StyledLink = styled(RouterLink)`
     transition: color 0.3s, color 0.3s, transform 0.3s;
     color: white;
   }
+`;
+
+const StyledHr = styled.hr`
+  border: 0;
+  height: 1px;
+  background: orange;
 `;
