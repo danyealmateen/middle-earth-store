@@ -1,15 +1,22 @@
-import React, { Fragment } from 'react';
 import { styled } from 'styled-components';
 import { Link as RouterLink } from 'react-router-dom';
 
 const DropDownMenu = () => {
+  const weaponLinks = [
+    { weapon: 'Swords', to: '/weapons/swords' },
+    { weapon: 'Axes', to: '/weapons/axes' },
+    { weapon: 'Staves', to: '/weapons/staves' },
+    { weapon: 'Maces', to: '/weapons/maces' },
+    { weapon: 'Daggers', to: '/weapons/daggers' },
+  ];
+
   return (
     <Menu>
-      <StyledLink to='/weapons/swords'>Swords</StyledLink>
-      <StyledLink to='/weapons/axes'>Axes</StyledLink>
-      <StyledLink to='/weapons/staves'>Staves</StyledLink>
-      <StyledLink to='/weapons/maces'>Maces</StyledLink>
-      <StyledLink to='/weapons/daggers'>Daggers</StyledLink>
+      {weaponLinks.map((weapon) => (
+        <StyledLink key={weapon.to} to={weapon.to}>
+          {weapon.weapon}
+        </StyledLink>
+      ))}
     </Menu>
   );
 };
