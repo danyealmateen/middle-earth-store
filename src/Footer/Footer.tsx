@@ -14,11 +14,13 @@ const Footer = () => {
       links: ['About', 'Contact', 'Creator'],
     },
   ];
+
+
   return (
     <>
       <br />
-      <hr className='styled-hr' />
-      <div className='grid-container'>
+      <hr className='footer-hr' />
+      <div className='footer-container'>
         {sections.map((section) => (
           <Section
             key={section.title}
@@ -35,7 +37,7 @@ const Section: React.FC<SectionsProps> = ({ title, links }) => (
   <div>
     <h2>{title}</h2>
     {links.map((link) => (
-      <RouterLink className='styled-link' key={link} to='/'>
+      <RouterLink className='footer-link' key={link} to='/'>
         {link}
       </RouterLink>
     ))}

@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import StoreModal from '../Modals/StoreModal';
+import StoreModal from '../Modals/RealmModal';
 import { BrowserRouter as Router, Link as RouterLink } from 'react-router-dom';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
 import './Header.css';

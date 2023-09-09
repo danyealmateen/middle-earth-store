@@ -1,5 +1,6 @@
-.menu {
+.dropdown-menu {
   display: flex;
+  flex-direction: column;
   position: absolute;
   background-color: #451808;
   border-radius: 5px;
@@ -9,8 +10,12 @@
   z-index: 1;
 }
 
-.styled-link {
+.dropdown-weapon-link {
   display: block;
   color: orange;
   text-decoration: none;
+}
+
+.dropdown-weapon-link:hover {
+  color: white;
 }

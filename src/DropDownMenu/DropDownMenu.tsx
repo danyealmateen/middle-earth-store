@@ -11,9 +11,13 @@ const DropDownMenu = () => {
   ];
 
   return (
-    <div className='menu'>
+    <div className='dropdown-menu'>
       {weaponLinks.map((weapon) => (
-        <RouterLink className='styled-link' key={weapon.to} to={weapon.to}>
+        <RouterLink
+          className='dropdown-weapon-link'
+          key={weapon.to}
+          to={weapon.to}
+        >
           {weapon.weapon}
         </RouterLink>
       ))}

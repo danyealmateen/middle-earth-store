@@ -56,12 +56,6 @@
   }
 
   .treeIMG {
-    width: 150px; /* Ändra detta värde till önskad bredd på mindre skärmar */
-  }
-}
-
-@media (min-width: 600px) {
-  .treeIMG {
-    width: 145px;
+    width: 130px;
   }
 }

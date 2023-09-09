@@ -1,5 +1,5 @@
 import { Link as RouterLink } from 'react-router-dom';
-import { styled } from 'styled-components';
+import './WeaponsPage.css';
 
 const WeaponsPage = () => {
   const weapons = [
@@ -13,46 +13,20 @@ const WeaponsPage = () => {
 
   return (
     <>
-      <Title>Legendary Weapons</Title>
-      <ContentContainer>
+      <h1 className='title'>Legendary Weapons</h1>
+      <div className='content-container'>
         {weapons.map((weapon) => (
-          <StyledLink to={weapon.to} key={weapon.title}>
+          <RouterLink
+            to={weapon.to}
+            key={weapon.title}
+            className='weapons-link'
+          >
             {weapon.title}
-          </StyledLink>
+          </RouterLink>
         ))}
-      </ContentContainer>
+      </div>
     </>
   );
 };
+
 export default WeaponsPage;
-
-const Title = styled.h1`
-  text-align: center;
-  color: white;
-`;
-
-const ContentContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, auto);
-  align-items: flex-start;
-  justify-items: center;
-  gap: 15px;
-  margin-top: 15px;
-
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-`;
-
-const StyledLink = styled(RouterLink)`
-  display: flex;
-  flex-direction: column;
-  // justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: #1f1e1c;
-  height: 300px;
-  width: 250px;
-  border: 2px solid gray;
-`;
