@@ -7,8 +7,7 @@
 .mainOneIMG {
   width: 275px;
   margin-top: 50px;
-  border-radius: 50%;
-  border: 3px solid rgb(2, 114, 118);
+  border: 1px solid white;
 }
 
 .main-div-container {
@@ -39,7 +38,7 @@
 .main-div-container a:hover {
   background-color: black;
   color: white;
-  filter: grayscale(1)
+  filter: grayscale(1);
 }
 
 .main-div-container a img {

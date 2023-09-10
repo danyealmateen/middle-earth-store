@@ -15,7 +15,7 @@ const Footer = () => {
           Contact
         </RouterLink>
         <RouterLink className='footer-link' to={'/'}>
-          Creater
+          Creator
         </RouterLink>
       </div>
     </>

@@ -48,3 +48,6 @@ const GetData = () => {
 };
 
 export default GetData;
+
+//Fixa inputform
+//Rendera det man söker fram
