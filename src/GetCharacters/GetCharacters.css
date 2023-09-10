@@ -1,0 +1,19 @@
+.character-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 8px; /* Lägger till rundade hörn */
+  padding: 16px; /* Lägger till lite vaddering runt innehållet */
+  margin: 16px; /* Lägger till lite marginal mellan korten */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lägger till en liten box-skugga för ett "lyft" effekt */
+  text-align: center;
+  width: 200px; /* Sätter en fast bredd på korten */
+  background-color: #f9f9f9; /* Lägger till en bakgrundsfärg */
+}
+
+.character-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

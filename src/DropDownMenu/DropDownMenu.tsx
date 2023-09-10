@@ -1,24 +1,37 @@
 import { Link as RouterLink } from 'react-router-dom';
 import './DropDownMenu.css';
 
-const DropDownMenu = () => {
-  const weaponLinks = [
-    { weapon: 'Swords', to: '/weapons/swords' },
-    { weapon: 'Axes', to: '/weapons/axes' },
-    { weapon: 'Staves', to: '/weapons/staves' },
-    { weapon: 'Maces', to: '/weapons/maces' },
-    { weapon: 'Daggers', to: '/weapons/daggers' },
-  ];
+export const characterLinks = [
+  { label: 'Sauron', to: '/character/sauron' },
+  { label: 'Saruman', to: '/character/saruman' },
+  { label: 'Gandalf', to: '/character/gandalf' },
+  { label: 'Aragon', to: '/character/aragon' },
+  { label: 'Elrond', to: '/character/elrond' },
+];
 
+export const weaponLinks = [
+  { label: 'Swords', to: '/weapons/swords' },
+  { label: 'Axes', to: '/weapons/axes' },
+  { label: 'Staves', to: '/weapons/staves' },
+  { label: 'Maces', to: '/weapons/maces' },
+  { label: 'Daggers', to: '/weapons/daggers' },
+];
+
+interface LinkType {
+  label: string;
+  to: string;
+}
+
+interface DropDownMenuProps {
+  links: LinkType[];
+}
+
+const DropDownMenu: React.FC<DropDownMenuProps> = ({ links }) => {
   return (
     <div className='dropdown-menu'>
-      {weaponLinks.map((weapon) => (
-        <RouterLink
-          className='dropdown-weapon-link'
-          key={weapon.to}
-          to={weapon.to}
-        >
-          {weapon.weapon}
+      {links.map((link) => (
+        <RouterLink className='dropdown-weapon-link' key={link.to} to={link.to}>
+          {link.label}
         </RouterLink>
       ))}
     </div>

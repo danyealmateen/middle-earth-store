@@ -51,13 +51,13 @@
 
 @media (max-width: 600px) {
   .modal-wrapper {
-    width: 90%; /* Ändrat till procentuell bredd för bättre responsivitet */
-    height: auto; /* Ändrat till auto för bättre responsivitet */
+    width: 90%;
+    height: auto;
   }
 
   .modal-wrapper select,
   .modal-wrapper button {
-    width: 70%; /* Ändrat till procentuell bredd för bättre responsivitet */
+    width: 70%;
   }
 
   .modal-wrapper button {
