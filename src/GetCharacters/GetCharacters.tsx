@@ -32,6 +32,7 @@ const GetData = () => {
 
   return (
     <div className='character-container'>
+      <h1>CHARACTERS</h1>
       {data &&
         data.map((character, index) => (
           <div className='character-div' key={index}>
