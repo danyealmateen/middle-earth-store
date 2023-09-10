@@ -13,6 +13,7 @@ const Header = () => {
         <p>{chosenStore}</p>
         <button onClick={() => setStoreModalPopUp(true)}>Choose Realm</button>
       </div>
+      <hr className='header-hr' />
       <div className='header-content-container'>
         <Link className='header-title' to='/'>
           WraithWing Haven

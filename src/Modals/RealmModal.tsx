@@ -5,25 +5,25 @@ import './RealmModal.css';
 const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
   const storeOptions = [
     {
-      value: 'rivendell',
-      label: 'Elfheim Fresh Fare',
-      img: './images/rivendell.jpg',
+      value: 'mordor',
+      label: 'Mordor',
+      img: './images/mordor.jpg',
     },
     {
-      value: 'helmsdeep',
-      label: 'The Deep Deli',
-      img: './images/helmsdeep.jpg',
+      value: 'dolguldur',
+      label: 'Dol Guldur',
+      img: './images/dolguldur.jpg',
     },
     {
-      value: 'rohan',
-      label: "Rohan's Rustic Rations",
-      img: '../images/rohan.jpg',
+      value: 'minasmorgul',
+      label: "minasmorgul's Rustic Rations",
+      img: '../images/minasmorgul.jpg',
     },
-    { value: 'shire', label: "Baggins' Bounty", img: './images/shire.jpg' },
+    { value: 'angmar', label: "Baggins' Bounty", img: './images/angmar.jpg' },
   ];
 
-  const [selectedOption, setSelectedOption] = useState('rivendell');
-  const [currentImage, setCurrentImage] = useState('./images/rivendell.jpg');
+  const [selectedOption, setSelectedOption] = useState('mordor');
+  const [currentImage, setCurrentImage] = useState('./images/mordor.jpg');
 
   useEffect(() => {
     const selectedStore = storeOptions.find(
@@ -42,10 +42,10 @@ const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
       >
         <h1>Choose realm</h1>
         <select onChange={(event) => setSelectedOption(event.target.value)}>
-          <option value='rivendell'>Elfheim Fresh Fare</option>
-          <option value='helmsdeep'>The Deep Deli</option>
-          <option value='rohan'>Rohan's Rustic Rations</option>
-          <option value='shire'>Baggins' Bounty</option>
+          <option value='mordor'>Mordor</option>
+          <option value='dolguldur'>Dol Guldur</option>
+          <option value='minasmorgul'>Minas Morgul</option>
+          <option value='angmar'>Angmar</option>
         </select>
         {currentImage && <img src={currentImage} alt={selectedOption} />}
         <button

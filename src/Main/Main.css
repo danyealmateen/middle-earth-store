@@ -38,7 +38,8 @@
 
 .main-div-container a:hover {
   background-color: black;
-  color: #f6b100;
+  color: white;
+  filter: grayscale(1)
 }
 
 .main-div-container a img {
