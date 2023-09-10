@@ -4,20 +4,15 @@
   grid-template-rows: repeat(5, auto);
   align-items: flex-start;
   justify-items: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.footer-container h2 {
-  color: white;
+  margin-top: 8px;
 }
 
 .footer-link {
   display: block;
-  color: orange;
+  color: rgb(2, 114, 118);
   text-decoration: none;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .footer-link:hover {
@@ -28,5 +23,5 @@
 .footer-hr {
   border: 0;
   height: 1px;
-  background: orange;
+  background: rgb(2, 114, 118);
 }

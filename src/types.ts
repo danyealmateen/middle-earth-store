@@ -6,3 +6,8 @@ export interface Character {
   wikiUrl: string;
   character: string;
 }
+
+export interface StoreModalProps {
+  closeModal: () => void;
+  storeName: (storeName: string) => void;
+}

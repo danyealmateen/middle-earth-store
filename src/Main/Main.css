@@ -5,8 +5,10 @@
 }
 
 .mainOneIMG {
-  width: 300px;
+  width: 275px;
   margin-top: 50px;
+  border-radius: 50%;
+  border: 3px solid rgb(2, 114, 118);
 }
 
 .main-div-container {
@@ -20,7 +22,7 @@
 }
 
 .main-div-container a {
-  background-color: #f6b100;
+  background-color: rgb(2, 114, 118);
   text-align: center;
   padding: 20px;
   border-radius: 5px;
@@ -40,8 +42,8 @@
 }
 
 .main-div-container a img {
-  width: 90px;
-  height: 60px;
+  width: 60px;
+  height: 50px;
   border-radius: 50px;
   margin-top: 10px;
 }

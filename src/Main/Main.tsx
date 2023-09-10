@@ -4,22 +4,19 @@ import './Main.css';
 const Main = () => {
   return (
     <div className='main-content-container'>
-      <img className='mainOneIMG' src='./images/mainone.png' alt='' />
+      <img className='mainOneIMG' src='./images/wraith1.png' alt='' />
       <div className='main-div-container'>
-        <Link to='shop-online'>
-          <h2>Weapons</h2>
-          <p>Forge Ahead with Superior Firepower!</p>
+        <Link to='/weapons'>
+          <h2>Explore Weapons</h2>
           <img src='./images/weapons.png' alt='' />
         </Link>
-        <Link to='shop-online'>
-          <h2>Armor</h2>
-          <p>Browse our Unbeatable Armor!</p>
+        <Link to='/armors'>
+          <h2>Explore Armor</h2>
           <img src='./images/armor.png' alt='' />
         </Link>
-        <Link to='shop-online'>
-          <h2>Groceries</h2>
-          <p>Try out our premium Groceries!</p>
-          <img src='./images/lembas.png' alt='' />
+        <Link to='/characters'>
+          <h2> Explore Characters</h2>
+          <img src='./images/eye.png' alt='' />
         </Link>
       </div>
     </div>

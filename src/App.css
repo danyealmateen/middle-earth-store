@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: 'Ringbearer';
   src: url('/src/fonts/RINGM___.TTF') format('truetype');
   font-weight: normal;
@@ -13,6 +13,6 @@
 
 body {
   background-color: black;
-  color: goldenrod;
+  color: rgb(2, 114, 118);
   font-family: 'Ringbearer', sans-serif;
-} */
+}

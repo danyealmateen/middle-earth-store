@@ -1,10 +1,6 @@
 import { useState, useEffect } from 'react';
+import { StoreModalProps } from '../types';
 import './RealmModal.css';
-
-interface StoreModalProps {
-  closeModal: () => void;
-  storeName: (storeName: string) => void;
-}
 
 const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
   const storeOptions = [
