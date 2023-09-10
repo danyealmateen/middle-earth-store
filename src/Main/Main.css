@@ -37,8 +37,8 @@
 
 .main-div-container a:hover {
   background-color: black;
-  color: white;
-  filter: grayscale(1);
+  color: rgb(13, 89, 210);
+  /* filter: grayscale(1); */
 }
 
 .main-div-container a img {
@@ -50,12 +50,9 @@
 
 @media (max-width: 600px) {
   .main-div-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .main-div-container a {
-    width: 100%;
-    max-width: 300px;
+    justify-content: center;
   }
 }
