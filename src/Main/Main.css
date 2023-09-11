@@ -48,6 +48,10 @@
   margin-top: 10px;
 }
 
+.main-link {
+  border: 2px solid white;
+}
+
 @media (max-width: 600px) {
   .main-div-container {
     display: flex;

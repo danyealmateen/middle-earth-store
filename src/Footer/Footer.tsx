@@ -7,7 +7,7 @@ const Footer = () => {
       <br />
       <hr className='footer-hr' />
       <div className='footer-container'>
-        <h1>INFORMATION</h1>
+        <h1 className='footer-title'>INFORMATION</h1>
         <RouterLink className='footer-link' to={'/'}>
           About
         </RouterLink>

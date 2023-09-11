@@ -6,15 +6,15 @@ const Main = () => {
     <div className='main-content-container'>
       <img className='mainOneIMG' src='./images/elf4.png' alt='' />
       <div className='main-div-container'>
-        <Link to='/characters'>
+        <Link className='main-link' to='/characters'>
           <h2>Seek Characters</h2>
           <img src='./images/eye.png' alt='' />
         </Link>
-        <Link to='/weapons'>
+        <Link className='main-link' to='/weapons'>
           <h2>Explore Weapons</h2>
           <img src='./images/weapons.png' alt='' />
         </Link>
-        <Link to='/armors'>
+        <Link className='main-link' to='/armors'>
           <h2>Explore Armor</h2>
           <img src='./images/armor.png' alt='' />
         </Link>
