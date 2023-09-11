@@ -7,14 +7,10 @@
   margin: 8px;
   text-align: center;
   width: 200px;
-  background-color:  rgb(2, 114, 118);
+  background-color: rgb(2, 114, 118);
   color: black;
 }
 
-
-
-.character-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.get-characters-warning-message {
+  color: red;
 }

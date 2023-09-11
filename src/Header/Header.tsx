@@ -9,21 +9,21 @@ const Header = () => {
 
   return (
     <>
-      {/* <div className='header-button-wrapper'>
+      <div className='header-button-wrapper'>
         <p>{chosenStore}</p>
         <button onClick={() => setStoreModalPopUp(true)}>Choose Realm</button>
-      </div> */}
+      </div>
       <hr className='header-hr' />
       <div className='header-content-container'>
         <Link className='header-title' to='/'>
           The Elven Forge
         </Link>
-        {/* {storeModalPopUp && (
+        {storeModalPopUp && (
           <RealmModal
             storeName={(newStoreName) => setChosenStore(newStoreName)}
             closeModal={() => setStoreModalPopUp(false)}
-          /> */}
-        {/* )} */}
+          />
+        )}
       </div>
     </>
   );

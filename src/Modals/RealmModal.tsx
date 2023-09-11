@@ -23,15 +23,15 @@ const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
   ];
 
   const [selectedOption, setSelectedOption] = useState('mordor');
-  const [currentImage, setCurrentImage] = useState('./images/mordor.jpg');
+  // const [currentImage, setCurrentImage] = useState('./images/mordor.jpg');
 
   useEffect(() => {
     const selectedStore = storeOptions.find(
       (store) => store.value === selectedOption
     );
-    if (selectedStore) {
-      setCurrentImage(selectedStore.img);
-    }
+    // if (selectedStore) {
+    //   setCurrentImage(selectedStore.img);
+    // }
   }, [selectedOption]);
 
   return (
@@ -47,7 +47,7 @@ const StoreModal = ({ closeModal, storeName }: StoreModalProps) => {
           <option value='minasmorgul'>Minas Morgul</option>
           <option value='angmar'>Angmar</option>
         </select>
-        {currentImage && <img src={currentImage} alt={selectedOption} />}
+        {/* {currentImage && <img src={currentImage} alt={selectedOption} />} */}
         <button
           onClick={() => {
             storeName(selectedOption);
