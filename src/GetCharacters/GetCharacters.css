@@ -1,3 +1,11 @@
+.character-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .character-div {
   display: flex;
   flex-direction: column;
@@ -17,4 +25,8 @@
 
 .character-wikiurl {
   color: white;
+}
+
+.char-span {
+  color: orange;
 }

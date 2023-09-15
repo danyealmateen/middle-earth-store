@@ -1,6 +1,7 @@
 import Header from './Header/Header';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
+import BuyWeapons from './BuyWeapons/BuyWeapons';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CharacterProvider } from './CharacterContext/CharacterContext';
 import GetData from './GetCharacters/GetCharacters';
@@ -15,6 +16,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Main />} />
             <Route path='/characters' element={<GetData />} />
+            <Route path='/weapons' element={<BuyWeapons />} />
           </Routes>
           <Footer />
         </Router>

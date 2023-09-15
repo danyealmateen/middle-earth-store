@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <>
       <div className='header-button-wrapper'>
-        <p>{chosenStore}</p>
+        <p className='store-text'>{chosenStore}</p>
         <button onClick={() => setStoreModalPopUp(true)}>Choose Realm</button>
       </div>
       <hr className='header-hr' />

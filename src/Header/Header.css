@@ -21,14 +21,14 @@
 }
 
 .header-button-wrapper button:hover {
-  background-color: white;
+  background-color: orange;
   color: black;
   transform: scale(1.05);
 }
 
 .header-title {
   font-size: 40px;
-  color: white;
+  color: orange;
   text-decoration: overline underline;
   text-decoration-color: rgb(2, 114, 118);
   transition: color 0.3s, transform 0.3s;
@@ -43,6 +43,10 @@
   border: 0;
   height: 2px;
   background: rgb(2, 114, 118);
+}
+
+.store-text {
+  color: orange;
 }
 
 @media (max-width: 600px) {

@@ -58,16 +58,45 @@ const GetData = () => {
       {data ? (
         data.map((character, index) => (
           <div key={index} className='character-card'>
-            <p>Name: {checkData(character.name)}</p>
-            <p>Race: {checkData(character.race)}</p>
-            <p>Realm: {checkData(character.realm)}</p>
-            <p>Gender: {checkData(character.gender)}</p>
-            <p>Hair: {checkData(character.hair)}</p>
-            <p>Height: {checkData(character.height)}</p>
-            <p>Spouse: {checkData(character.spouse)}</p>
-            <p>Birth: {checkData(character.birth)}</p>
-            <p>Death: {checkData(character.death)}</p>
-            <a href={character.wikiUrl}>More: {character.wikiUrl}</a>
+            <p>
+              Name:
+              <span className='char-span'>{checkData(character.name)}</span>
+            </p>
+            <p>
+              Race:
+              <span className='char-span'>{checkData(character.race)}</span>
+            </p>
+            <p>
+              Realm:
+              <span className='char-span'>{checkData(character.realm)}</span>
+            </p>
+            <p>
+              Gender:
+              <span className='char-span'>{checkData(character.gender)}</span>
+            </p>
+            <p>
+              Hair:
+              <span className='char-span'>{checkData(character.hair)}</span>
+            </p>
+            <p>
+              Height:
+              <span className='char-span'>{checkData(character.height)}</span>
+            </p>
+            <p>
+              Spouse:
+              <span className='char-span'>{checkData(character.spouse)}</span>
+            </p>
+            <p>
+              Birth:
+              <span className='char-span'>{checkData(character.birth)}</span>
+            </p>
+            <p>
+              Death:
+              <span className='char-span'>{checkData(character.death)}</span>
+            </p>
+            <span className='char-span'>
+              <a href={character.wikiUrl}>More: {character.wikiUrl}</a>
+            </span>
           </div>
         ))
       ) : (
