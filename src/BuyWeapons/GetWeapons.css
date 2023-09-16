@@ -1,19 +1,13 @@
 .weapon-card-container {
   display: flex;
-
+  justify-content: center;
   font-size: 20px;
 }
 
 .weapon-card {
-  background-color: rgb(52, 56, 56);
   color: orange;
   border-radius: 5px;
   margin: 15px;
-  min-width: 450px;
-  max-width: 450px;
-  word-wrap: break-word;
-  min-height: 350px;
-  max-height: 450px;
   text-align: center;
   border: 3px solid rgb(2, 114, 118);
   padding: 25px;
@@ -24,8 +18,9 @@
 }
 
 .weapon-card:hover {
-  background-color: black;
-  color: solid rgb(2, 114, 118);
+  background-color: rgb(2, 114, 118);
+  color: silver;
+  border: 3px solid gold;
   transition: background-color 0.3s, color 0.3s;
 }
 .weapon-card-img {

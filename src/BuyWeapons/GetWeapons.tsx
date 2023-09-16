@@ -28,9 +28,9 @@ const GetWeapons = () => {
       {weapons &&
         Object.entries(weapons).map(([key, value]) => (
           <div key={key}>
-            <Link className='weapon-link' to={'/'}>
+            <Link className='weapon-link' to={'/shop'}>
               <div className='weapon-card'>
-                <img className='weapon-card-img' src={value.img} alt="" />
+                <img className='weapon-card-img' src={value.img} alt='' />
                 <p>{value.title}</p>
                 <p>{value.description}</p>
                 <p>Price: {value.price} gold</p>

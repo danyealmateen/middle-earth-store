@@ -6,8 +6,9 @@
 
 .mainOneIMG {
   width: 275px;
-  margin-top: 50px;
-  border: 1px solid orange;
+  margin-top: 20px;
+  border: 3px solid  rgb(2, 114, 118);
+  border-radius: 50%;
 }
 
 .main-div-container {

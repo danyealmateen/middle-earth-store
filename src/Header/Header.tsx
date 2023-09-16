@@ -13,7 +13,7 @@ const Header = () => {
         <p className='store-text'>{chosenStore}</p>
         <button onClick={() => setStoreModalPopUp(true)}>Choose Realm</button>
       </div>
-      <hr className='header-hr' />
+      {/* <hr className='header-hr' /> */}
       <div className='header-content-container'>
         <Link className='header-title' to='/'>
           The Elven Forge

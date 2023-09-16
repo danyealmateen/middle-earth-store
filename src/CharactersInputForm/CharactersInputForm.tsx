@@ -24,7 +24,7 @@ const CharactersInputForm = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button onClick={submitHandler} type='submit'>
+          <button className='character-input-button' onClick={submitHandler} type='submit'>
             Seek
           </button>
         </form>

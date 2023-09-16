@@ -1,5 +1,36 @@
 .input-form-container {
-    width: 300px;
-    height: 100px;
-    font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  width: 300px;
+  height: 100px;
+  font-size: 30px;
+}
+
+.character-input {
+  background: orange;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  border: 3px solid gold;
+  border-radius: 5px;
+}
+
+.character-input-button {
+  font-size: 25px;
+  background-color: orange;
+  color: black;
+  border-radius: 3px;
+  font-family: 'Ringbearer', sans-serif;
+  margin-bottom: 10px;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.character-input-button:hover {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
