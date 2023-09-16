@@ -35,3 +35,10 @@ export interface MyDataItemType {
   race: string;
   wikiUrl: string;
 }
+
+export interface Weapon {
+  title: string;
+  description: string;
+  price: number;
+  stock: number;
+}

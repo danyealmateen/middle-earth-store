@@ -1,0 +1,14 @@
+.weapon-card {
+  background-color: aqua;
+  margin: 15px;
+  min-width: 75px;
+  max-width: 300px;
+  word-wrap: break-word;
+  min-height: 75px;
+  max-height: 300px;
+  text-align: center;
+}
+
+.weapon-card-container {
+  display: flex;
+}

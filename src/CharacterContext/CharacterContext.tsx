@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
 import { CharacterContextProps } from '../types';
-import { CharacterProviderProps } from '../types';
 
 export const CharacterContext = createContext<CharacterContextProps | null>(
   null
