@@ -20,10 +20,13 @@ As of now, the project has the following features:
 
 The project is crafted using React coupled with TypeScript, showcasing the integration of several key features like:
 
+
 - States
 - Routing
 - Context
 - Props
+
+Firebase is being used as a backend to get data.
 
 ...and many more elements that might not be listed here but contribute to the richness of the project.
 
