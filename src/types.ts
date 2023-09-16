@@ -41,4 +41,5 @@ export interface Weapon {
   description: string;
   price: number;
   stock: number;
+  img: string;
 }

@@ -1,14 +1,33 @@
-.weapon-card {
-  background-color: aqua;
-  margin: 15px;
-  min-width: 75px;
-  max-width: 300px;
-  word-wrap: break-word;
-  min-height: 75px;
-  max-height: 300px;
-  text-align: center;
-}
-
 .weapon-card-container {
   display: flex;
+
+  font-size: 20px;
+}
+
+.weapon-card {
+  background-color: rgb(52, 56, 56);
+  color: orange;
+  border-radius: 5px;
+  margin: 15px;
+  min-width: 450px;
+  max-width: 450px;
+  word-wrap: break-word;
+  min-height: 350px;
+  max-height: 450px;
+  text-align: center;
+  border: 3px solid rgb(2, 114, 118);
+  padding: 25px;
+}
+
+.weapon-link {
+  text-decoration: none;
+}
+
+.weapon-card:hover {
+  background-color: black;
+  color: solid rgb(2, 114, 118);
+  transition: background-color 0.3s, color 0.3s;
+}
+.weapon-card-img {
+  width: 200px;
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Weapon } from '../types';
 import './GetWeapons.css';
+import { Link } from 'react-router-dom';
 
 const GetWeapons = () => {
   const [weapons, setWeapons] = useState<Record<string, Weapon> | null>(null);
@@ -23,18 +24,19 @@ const GetWeapons = () => {
   }, []);
 
   return (
-    <div>
+    <div className='weapon-card-container'>
       {weapons &&
         Object.entries(weapons).map(([key, value]) => (
           <div key={key}>
-            <div className='weapon-card-container'>
+            <Link className='weapon-link' to={'/'}>
               <div className='weapon-card'>
+                <img className='weapon-card-img' src={value.img} alt="" />
                 <p>{value.title}</p>
                 <p>{value.description}</p>
-                <p>{value.price}</p>
-                <p>{value.stock}</p>
+                <p>Price: {value.price} gold</p>
+                <p>Stock: {value.stock} left</p>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
     </div>
