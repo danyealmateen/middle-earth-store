@@ -30,3 +30,7 @@
 .char-span {
   color: orange;
 }
+
+.no-char-found-msg {
+  color: red;
+}
