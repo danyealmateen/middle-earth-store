@@ -17,12 +17,6 @@
   text-decoration: none;
 }
 
-.weapon-card:hover {
-  background-color: rgb(2, 114, 118);
-  color: silver;
-  border: 3px solid gold;
-  transition: background-color 0.3s, color 0.3s;
-}
 .weapon-card-img {
   width: 200px;
 }
