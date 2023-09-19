@@ -7,6 +7,7 @@ import './GetCharacters.css';
 const GetData = () => {
   const { saveInputValue } = useContext(CharacterContext)!;
   const [data, setData] = useState<Character[] | null>(null);
+  const [dataCheck, setDataCheck] = useState<string | null>(null);
 
   const headers = {
     Accept: 'application/json',
@@ -21,7 +22,7 @@ const GetData = () => {
           .split(' ')
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join(' ');
-        console.log(formattedInputValue);
+
 
         const response = await fetch(
           `https://the-one-api.dev/v2/character?name=${formattedInputValue}`,
@@ -30,14 +31,17 @@ const GetData = () => {
           }
         );
         const data = await response.json();
-        console.log('API response:', data.docs);
 
-        const exactMatchCharacters = data.docs.filter(
-          (character: Character) => character.name === formattedInputValue
-        );
-
-        console.log(exactMatchCharacters);
-        setData(exactMatchCharacters);
+        if (data.docs.length === 0) {
+          setData(null)
+          setDataCheck("No Character Found.")
+        } else {
+          const exactMatchCharacters = data.docs.filter(
+            (character: Character) => character.name === formattedInputValue
+          );
+          setData(exactMatchCharacters);
+          setDataCheck(null)
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -101,15 +105,9 @@ const GetData = () => {
         ))
       ) : (
         <div>
-          <span className='get-characters-warning-message'>IMPORTANT!</span>
-          <p>
-            The API requires that you type out the full name!
-            <br />
-            "Frodo" - not valid!
-            <br />
-            "Frodo Baggins" valid!
-          </p>
+          {dataCheck && <h1 className='no-char-found-msg'>{dataCheck}</h1>}
         </div>
+
       )}
     </div>
   );
